@@ -3,36 +3,56 @@
 import { motion } from "framer-motion";
 import Container from "./Container";
 
-const capabilities = [
+const layers = [
     {
-        title: "Built for scale",
-        description:"From personal devices to complex environments, CrystalOS adapts without compromise."
+        title: "Core System Layer",
+        description: "A minimal, resilient foundation engineered for stability, performance and longevity.",
     },
     {
-        title: "Designed for intelligence",
-        description:"Systems that learn, anticipate and optimize — without exposing complexity."
+        title: "Intelligence Layer",
+        description: "Adaptive systems that learn context, optimize behavior and evolve with usage.",
     },
     {
-        title: "Engineered for trust",
-        description:"Security and stability are embedded at the core, not added later."
-    }
+        title: "Experience Layer",
+        description: "A refined interface where motion, feedback and clarity work in quiet harmony.",
+    },
 ];
 
 export default function Capabilities() {
     return (
-        <section className="relative py-44">
+        <section className="relative py-56">
             <Container>
-                <div className="max-w-3xl mx-auto text-center space-y-28">
-                    {capabilities.map((item, i) => (
-                        <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ amount : 0.3 }} transition={{duration: 0.9, ease: "easeOut", delay: i * 0.1}}>
-                            <h3 className="font-heading text-4xl md:text-5xl mb-6">
-                                {item.title}
-                            </h3>
-                            <p className="text-textMuted text-xl leading-relaxed">
-                                {item.description}
-                            </p>
-                        </motion.div>
-                    ))}
+                {/* Section header */}
+                <div className="text-center mb-32">
+                    <span className="block text-sm tracking-widest text-textMuted mb-4">
+                        SYSTEM ARCHITECTURE
+                    </span>
+                    <h2 className="font-heading text-4xl md:text-5xl">
+                        Designed in layers
+                    </h2>
+                </div>
+
+                {/* Architecture layout */}
+                <div className="relative max-w-5xl mx-auto">
+                    {/* Energy spine */}
+                    <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[var(--divider)] to-transparent -translate-x-1/2" />
+                    <div className="flex flex-col gap-40">
+                        {layers.map((layer, i) => {
+                            const isRight = i % 2 === 0;
+                            return (
+                                <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} whileHover={{ y: -4 }} viewport={{ amount: 0.4 }} transition={{ duration: 0.8, ease: "easeOut" }} className={`relative max-w-md ${isRight ? "ml-auto text-left pr-24" : "mr-auto text-right pl-24"}`}>
+                                    <div className="rounded-2xl border border-[var(--divider)] bg-[var(--surface)]/70 backdrop-blur px-8 py-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
+                                        <h3 className="font-heading text-3xl mb-4">
+                                            {layer.title}
+                                        </h3>
+                                        <p className="text-textMuted text-lg leading-relaxed">
+                                            {layer.description}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
                 </div>
             </Container>
         </section>

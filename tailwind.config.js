@@ -12,12 +12,26 @@ module.exports = {
                 body: ["Inter", "sans-serif"],
             },
             colors: {
-                background: "#0B0F14",
-                surface: "#111827",
-                glass: "rgba(255,255,255,0.08)",
-                glassBorder: "rgba(255,255,255,0.15)",
-                textPrimary: "#E5E7EB",
-                textMuted: "#9CA3AF",
+                background: {
+                    dark: "#0B0F14",
+                    light: "#F8FAFC"
+                },
+                surface: {
+                    dark: "#111827",
+                    light: "#FFFFFF"
+                },
+                textPrimary: {
+                    dark: "#E5E7EB",
+                    light: "#0F172A"
+                },
+                textMuted: {
+                    dark: "#9CA3AF",
+                    light: "#475569"
+                },
+                divider: {
+                    light: "rgba(0,0,0,0.08)",
+                    dark: "rgba(255,255,255,0.12)"
+                },
                 accent: "#38BDF8",
             },
         },

@@ -1,4 +1,4 @@
-import Vision from "./components/Vision";
+import SectionFrame from "./components/SectionFrame";
 import Hero from "./components/Hero";
 import Philosophy from "./components/Philosophy";
 import Experience from "./components/Experience";
@@ -8,9 +8,8 @@ import Future from "./components/Future";
 
 export default function Home() {
     return (
-        <main className="bg-background text-textPrimary">
+        <main id="top" className="bg-background text-textPrimary">
             <Hero />
-            <Vision />
             <Philosophy />
             <Experience />
             <Capabilities />

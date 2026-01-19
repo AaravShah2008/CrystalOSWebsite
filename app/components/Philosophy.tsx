@@ -1,40 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Container from "./Container";
-
-const principles = [
-    {
-        title: "Clarity over complexity",
-        description:"Every decision is intentional. Nothing exists without purpose."
-    },
-    {
-        title: "Technology should adapt",
-        description:"Your system should understand you, not demand that you adapt to it."
-    },
-    {
-        title: "Built for the long term",
-        description:"Designed to evolve quietly, without breaking what already works."
-    }
-];
+import SectionFrame from "./SectionFrame";
 
 export default function Philosophy() {
     return (
-        <section className="relative py-32">
-            <Container>
-                <div className="max-w-3xl space-y-16">
-                    {principles.map((item, i) => (
-                        <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ amount : 0.3 }} transition={{duration: 0.7, ease: "easeOut", delay: i * 0.1}}>
-                            <h3 className="font-heading text-2xl md:text-3xl mb-3">
-                                {item.title}
-                            </h3>
-                            <p className="text-textMuted text-lg leading-relaxed">
-                                {item.description}
-                            </p>
-                        </motion.div>
-                    ))}
+        <SectionFrame>
+            <motion.div className="relative glass-panel p-12 md:p-16 text-center overflow-hidden" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ amount: 0.4 }} transition={{ duration: 0.9, ease: "easeOut" }}>
+                {/* Subtle ambient layer */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_65%)] opacity-70" />
+
+                {/* Minimal visual cue */}
+                <div className="flex justify-center mb-6">
+                    <motion.div animate={{ opacity: [0.3, 0.8, 0.3] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="h-[2px] w-20 rounded-full bg-accent/60" />
                 </div>
-            </Container>
-        </section>
+
+                <span className="relative block text-sm tracking-widest text-textMuted mb-4">
+                    PHILOSOPHY
+                </span>
+
+                <h2 className="relative font-heading text-4xl md:text-5xl mb-6">
+                    Design that respects the user
+                </h2>
+
+                <p className="relative text-textMuted text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                    Every decision in CrystalOS is driven by clarity,
+                    performance, and respect for the user's attention.
+                    Power is present — but never imposed.
+                </p>
+            </motion.div>
+        </SectionFrame>
     );
 }
