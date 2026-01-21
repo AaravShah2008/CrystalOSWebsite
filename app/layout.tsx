@@ -1,6 +1,5 @@
 import "./globals.css";
 import Navbar from "./components/Navbar"
-import SystemCursor from "./components/SystemCursor";
 
 import "@fontsource/orbitron/400.css";
 import "@fontsource/orbitron/600.css";
@@ -18,7 +17,6 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <body className="font-body bg-background text-textPrimary">
-                <SystemCursor />
                 <Navbar />
                 {children}
             </body>

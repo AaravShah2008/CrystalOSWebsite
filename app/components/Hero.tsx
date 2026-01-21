@@ -28,7 +28,7 @@ export default function Hero() {
                     CrystalOS
                 </h1>
 
-                <p className="text-textMuted text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
+                <p className="text-textMuted/80 tracking-widest text-xl md:text-2xl max-w-2xl mx-auto">
                     A next generation operating system, <br />
                     designed for what comes next.
                 </p>

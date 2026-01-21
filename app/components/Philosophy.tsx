@@ -20,14 +20,34 @@ export default function Philosophy() {
                 </span>
 
                 <h2 className="relative font-heading text-4xl md:text-5xl mb-6">
-                    Design that respects the user
+                    Designed with intent. <br />
+                    Built with restraint.
                 </h2>
 
-                <p className="relative text-textMuted text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                    Every decision in CrystalOS is driven by clarity,
-                    performance, and respect for the user's attention.
-                    Power is present — but never imposed.
-                </p>
+                <div className="relative mt-12 flex flex-col items-center gap-10">
+                    <p className="relative text-textMuted text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+                        Technology should feel calm.
+                        <span className="block mt-2 opacity-70">Not loud. Not demanding.</span>
+                    </p>
+
+                    {/* Subtle divider pulse */}
+                    <motion.div className="h-px w-24 bg-[var(--divider)]" animate={{ opacity: [0.3, 0.7, 0.3] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}/>
+
+                    <p className="text-textPrimary text-lg md:text-xl max-w-2xl leading-relaxed">
+                        Every interaction should earn its place.
+                        <br />
+                        Nothing exists without reason.
+                    </p>
+
+                    {/* Subtle divider pulse */}
+                    <motion.div className="h-px w-16 bg-[var(--divider)]" animate={{ opacity: [0.25, 0.6, 0.25] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}/>
+
+                    <p className="relative text-textMuted text-lg md:text-xl max-w-3xl max-auto leading-relaxed opacity-80">
+                        The best systems disappear.
+                        <br />
+                        Only the experience remains.
+                    </p>
+                </div>
             </motion.div>
         </SectionFrame>
     );

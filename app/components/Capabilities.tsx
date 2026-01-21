@@ -6,15 +6,15 @@ import Container from "./Container";
 const layers = [
     {
         title: "Core System Layer",
-        description: "A minimal, resilient foundation engineered for stability, performance and longevity.",
+        description: "Stability. Performance. Longevity.",
     },
     {
         title: "Intelligence Layer",
-        description: "Adaptive systems that learn context, optimize behavior and evolve with usage.",
+        description: "Context-aware. Adaptive. Evolving.",
     },
     {
         title: "Experience Layer",
-        description: "A refined interface where motion, feedback and clarity work in quiet harmony.",
+        description: "Clarity through motion and restraint.",
     },
 ];
 

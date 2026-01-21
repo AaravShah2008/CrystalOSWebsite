@@ -27,7 +27,7 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
     return (
-        <header className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? "top-4" : "top-0"}`}>
+        <header className={`fixed w-full z-[10001] transition-all duration-500 ${scrolled ? "top-4" : "top-0"}`}>
             {/* FIXED (edge-to-edge) */}
             {!scrolled && (
                 <div className="w-full glass py-6 px-10">
