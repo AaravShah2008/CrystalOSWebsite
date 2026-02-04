@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/Navbar"
+import ScrollToTop from "./components/ScrollToTop";
 
 import "@fontsource/orbitron/400.css";
 import "@fontsource/orbitron/600.css";
@@ -18,6 +19,7 @@ export default function RootLayout({
         <html lang="en" className="dark">
             <body className="font-body bg-background text-textPrimary">
                 <Navbar />
+                <ScrollToTop />
                 {children}
             </body>
         </html>
